@@ -24,6 +24,10 @@ const pythonSnippets = [
       } else {
         charIndex = 0;
         Prism.highlightAll();
+        var elements = document.querySelectorAll('.language-css');
+                for (var i = 0; i < elements.length; i++) {
+                  elements[i].style.backgroundColor = 'transparent';
+                }
         setTimeout(() => {
           typeNextSnippet();
         }, 2000); // Delay before clearing the terminal and typing the next snippet
